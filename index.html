@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>静止Webサイトのベース</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ヘッダーをインクルード -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section id="home">
+            <h2>ホーム</h2>
+            <p>ここにホームページの内容が入ります。</p>
+        </section>
+
+        <section id="about">
+            <h2>私について</h2>
+            <p>ここに自己紹介の内容が入ります。</p>
+        </section>
+
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            <p>ここに連絡先情報が入ります。</p>
+        </section>
+    </main>
+
+    <!-- フッターをインクルード -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // ヘッダーとフッターを読み込むJavaScript
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>
