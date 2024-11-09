@@ -40,3 +40,8 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+clock {
+    font-size: 2em;
+    font-weight: bold;
+}
